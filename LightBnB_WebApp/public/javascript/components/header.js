@@ -47,6 +47,7 @@ $(() => {
 
   $("header").on("click", '.my_reservations_button', function() {
     propertyListings.clearListings();
+
     getAllReservations()
       .then(function(json) {
         propertyListings.addProperties(json.reservations, true);
